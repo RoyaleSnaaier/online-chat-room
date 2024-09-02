@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Establish a database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "chat";
+$servername = "sql11.freesqldatabase.com";
+$username = "sql11697773";
+$password = "uDQdPEPKSR";
+$dbname = "sql11697773";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -173,7 +173,7 @@ $messages = getMessages($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Room</title>
-    <link rel="stylesheet" href="style-index-7.css">
+    <link rel="stylesheet" href="style-index-8.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 </head>
 <body>
@@ -187,16 +187,14 @@ $messages = getMessages($conn);
 <div class="bubble-3"></div>
 <nav>
     <ul>
-        <li class="user-menu"><a href="index.php">Home</a></li>
-        <li class="user-menu"><a href="user-list.php">Users</a></li>
-        <li class="user-menu"><a href="banned.php">Banned</a></li>
+        <li><a href="profile.php">Profile</a></li> <!-- Link to profile page -->
+        <li><a href="logout.php">Logout</a></li>
     </ul>
     <ul>
     <li class="user-menu">
         <div class="menu">
             <ul>
-            <li><a href="profile.php">Profile</a></li> <!-- Link to profile page -->
-                <li><a href="logout.php">Logout</a></li>
+
             </ul>
         </div>
     </li>
@@ -245,8 +243,8 @@ $messages = getMessages($conn);
             <input type="text" class="input-msg" name="message" placeholder="Type your message">
             <label for="image-input" class="custom-file-upload"><i class="fas fa-image"></i></label>
             <input type="file" id="image-input" name="image" accept="image/*" style="display: none;"> <!-- Image upload -->
-            <label for="audio-input" class="custom-file-upload"><i class="fas fa-paperclip"></i></label>
-            <input type="file" id="audio-input" name="audio" accept="audio/*" style="display: none;"> <!-- Audio upload -->
+            <!-- <label for="audio-input" class="custom-file-upload"><i class="fas fa-paperclip"></i></label>
+            <input type="file" id="audio-input" name="audio" accept="audio/*" style="display: none;"> Audio upload -->
             <button class="send-button" type="submit"><i class="fas fa-paper-plane"></i></button>
         </form>
     </div>

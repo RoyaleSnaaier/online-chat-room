@@ -9,7 +9,6 @@ if (isset($_SESSION['unique_id'])) {
 
 // Include the database connection and configuration file
 include_once "config.php";
-
 require_once 'mysql.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

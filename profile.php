@@ -109,14 +109,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="#">Users</a></li>
         <li><a href="#">Messages</a></li>
     </ul>
     <ul>
     <li class="user-menu">
         <div class="menu">
             <ul>
-            <li><a href="profile.php">Profile</a></li> <!-- Link to profile page -->
+                <!-- <li><a href="profile.php">Profile</a></li> -->
                 <li><a href="logout.php">Logout</a></li>
                 <img class="avatar" src="img/<?php echo $userInfo['img']; ?>" alt="Profile Picture" class="profile-pic">
             </ul>

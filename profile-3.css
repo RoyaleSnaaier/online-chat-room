@@ -66,7 +66,7 @@ input[type="submit"] {
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: none;
     transition: background-color 0.3s ease;
     font-size: 16px;
 }

@@ -30,19 +30,19 @@ function deleteAllMessages($conn) {
     }
 }
 // Function to insert message into database
-function insertMessage($conn, $user_id, $message, $timestamp, $imagePath, $audioPath, $videoPath) {
+function insertMessage($conn, $user_id, $message, $timestamp, $imagePath, $videoPath) {
     $user_id = mysqli_real_escape_string($conn, $user_id);
     $message = mysqli_real_escape_string($conn, $message);
     $timestamp = mysqli_real_escape_string($conn, $timestamp);
     $imagePath = mysqli_real_escape_string($conn, $imagePath);
-    $audioPath = mysqli_real_escape_string($conn, $audioPath);
     $videoPath = mysqli_real_escape_string($conn, $videoPath); // Add video path
     
-    $sql = "INSERT INTO chat_messages (user_id, message, timestamp, image, audio, video) 
-            VALUES ('$user_id', '$message', '$timestamp', '$imagePath', '$audioPath', '$videoPath')"; // Update query
+    $sql = "INSERT INTO chat_messages (user_id, message, timestamp, image, video) 
+            VALUES ('$user_id', '$message', '$timestamp', '$imagePath', '$videoPath')"; // Update query
     
     return mysqli_query($conn, $sql);
 }
+
 
 // Function to retrieve messages from the database along with user details
 function getMessages($conn) {
